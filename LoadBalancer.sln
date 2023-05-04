@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadBalancer", "LoadBalancer\LoadBalancer.csproj", "{64B4643B-65F3-4181-BCA4-DF425946DB7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{67F5236A-9629-418B-B8D3-B01FDF63F905}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadBalancer.Tests", "LoadBalancer.Tests\LoadBalancer.Tests.csproj", "{D8BFFE16-217E-4D2A-AE8C-3D5366C394FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64B4643B-65F3-4181-BCA4-DF425946DB7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64B4643B-65F3-4181-BCA4-DF425946DB7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64B4643B-65F3-4181-BCA4-DF425946DB7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64B4643B-65F3-4181-BCA4-DF425946DB7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8BFFE16-217E-4D2A-AE8C-3D5366C394FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8BFFE16-217E-4D2A-AE8C-3D5366C394FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8BFFE16-217E-4D2A-AE8C-3D5366C394FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8BFFE16-217E-4D2A-AE8C-3D5366C394FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D54F6AD-066E-4D28-974F-AC431C17B0DC}
+	EndGlobalSection
+EndGlobal
