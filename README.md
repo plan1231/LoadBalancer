@@ -39,7 +39,7 @@ Add a LoadBalancer section to your `appsettings.json` file with the following pr
   }
 }
 ```
-Field key:
+property key:
 
 - `HealthCheck`: Configures the health check settings.
     - `Enabled`: Enables or disables the health check feature (boolean).
@@ -59,9 +59,10 @@ There are two options to running the project
 Use Visual Studio and open the LoadBalancer solution.  Configure the appsettings.json file as desired. Build the project LoadBalancer using the UI. Visual studio should handle copying appsettings.json to the build directory for you
 
 ### Option 2
-Use the CLI. At the solution root, run `dotnet build LoadBalancer/LoadBalancer.csproj`, then edit and copy  appsettings.json inside the file to the build directory manually.
-The command will output the build directory.
+Use the CLI. At the solution root, run `dotnet build LoadBalancer/LoadBalancer.csproj`. The compiler should have already copy appsettings.json into the output folder for you. If not, copy it manually from `LoadBalancer/appsettings.json`.
+Then edit it according to the key above.
 
+To find where the output directory is, simply look at the output of the build command.
 ```
 phillan@Phils-MacBook-Pro LoadBalancer % dotnet build LoadBalancer/LoadBalancer.csproj
 
@@ -77,3 +78,9 @@ Build succeeded.
 Time Elapsed 00:00:01.24
 ```
 Then `cd` into the output directory and run `dotnet LoadBalancer.dll`
+
+
+## Limitations
+- No ssl support.
+- Classes in namespace `LoadBalancer.Configuration` conflict with other namespaces, which means every time you want to use them you have to use add `Configuration.` before the class name. I made this trade-off conciously as this makes
+the code to parse the config file a lot shorter, while also making the json field names more user friendly (e.g. in the config file, it's "SessionAffinity" instead of "SessionAffinityConfig")
